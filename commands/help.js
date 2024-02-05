@@ -1,18 +1,3 @@
-/*
-
-  ██████╗░████████╗██╗░░██╗           
-  ██╔══██╗╚══██╔══╝╚██╗██╔╝          
-  ██████╔╝░░░██║░░░░╚███╔╝░          
-  ██╔══██╗░░░██║░░░░██╔██╗░          
-  ██║░░██║░░░██║░░░██╔╝╚██╗          
-  ╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝          
-
-   
-   # MADE BY RTX!! FEEL FREE TO USE ANY PART OF CODE
-   ## FOR HELP CONTACT ME ON DISCORD
-   ## Contact    [ DISCORD SERVER :  https://discord.gg/FUEHs7RCqz ]
-   ## YT : https://www.youtube.com/channel/UCPbAvYWBgnYhliJa1BIrv0A
-*/
 const { ApplicationCommandOptionType } = require('discord.js');
 const db = require("../mongoDB");
 
@@ -43,7 +28,7 @@ module.exports = {
           { name: '⏮️ Previous', value: 'Play the previous song in the queue' },
           { name: '🔀 Shuffle', value: 'Shuffle the songs in queue' }
         )
- 
+        .setImage(`https://cdn.discordapp.com/attachments/1004341381784944703/1165201249331855380/RainbowLine.gif?ex=654f37ba&is=653cc2ba&hm=648a2e070fab36155f4171962e9c3bcef94857aca3987a181634837231500177&`); 
 
       const basicCommandsEmbed = new EmbedBuilder()
         .setColor(client.config.embedColor)
@@ -56,7 +41,16 @@ module.exports = {
            { name: '🎵 Now Playing', value: 'Display the currently playing song information' },
           { name: '🔊 Volume', value: 'Adjust the music volume [ hearing at high volumes is risky ]' },
         ) 
-      
+       .setImage('')
+
+      const button2 = new ButtonBuilder()
+        .setLabel('Discord')
+        .setURL('https://discord.gg/2B78UcUWh8')
+        .setStyle(ButtonStyle.Link);
+
+
+      const row = new ActionRowBuilder()
+        .addComponents(button2);
 
       interaction.reply({
         embeds: [musicCommandsEmbed, basicCommandsEmbed],
@@ -67,19 +61,3 @@ module.exports = {
     }
   },
 };
-
-/*
-
-  ██████╗░████████╗██╗░░██╗           
-  ██╔══██╗╚══██╔══╝╚██╗██╔╝          
-  ██████╔╝░░░██║░░░░╚███╔╝░          
-  ██╔══██╗░░░██║░░░░██╔██╗░          
-  ██║░░██║░░░██║░░░██╔╝╚██╗          
-  ╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝          
-
-   
-   # MADE BY RTX!! FEEL FREE TO USE ANY PART OF CODE
-   ## FOR HELP CONTACT ME ON DISCORD
-   ## Contact    [ DISCORD SERVER :  https://discord.gg/FUEHs7RCqz ]
-   ## YT : https://www.youtube.com/channel/UCPbAvYWBgnYhliJa1BIrv0A
-*/
