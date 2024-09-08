@@ -1,4 +1,4 @@
-#  MULTI-MUSIC BOT BY RTX 
+#  MULTI-MUSIC BOT
 ▶️ simple and powerful music bot.
 ▶️ consisting of various commands.
 ▶️ Still in development you may face minor bugs|
